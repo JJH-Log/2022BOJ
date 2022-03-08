@@ -1,0 +1,42 @@
+#define MAXN 50000
+int t, sz, SA[MAXN], g[MAXN], tg[MAXN], LCP[MAXN];
+string s;
+
+bool suffix_cmp(int x, int y) {
+	if (g[x] != g[y]) return g[x] < g[y]; 
+	int xi = x + t < sz ? g[x + t] : -1;
+	int yi = y + t < sz ? g[y + t] : -1;
+	return g[x + t] < g[y + t];
+}
+
+void SuffixArrayLCP() {
+    /*============================================
+    string s : target string (init by input)
+    int sz : size of s (init value : string -> s.size(), char -> strlen(s))
+    int t : gap while constructing suffixarray
+    int SA[MAXN] : syffix array
+    int g[MAXN] : group number
+    int tg[MAXN] : temporarily saved group number (exchange every phase)
+    int LCP[MAXN] : lcp array
+    ============================================*/
+	for (int i = 0; i < sz; i++) {
+		SA[i] = i;
+		g[i] = s[i];
+	}
+	for (t = 1; t <= sz; t <<= 1) {
+		sort(SA, SA + sz, suffix_cmp);
+		tg[SA[0]] = 0;
+		for (int i = 1; i < sz; i++) tg[SA[i]] = tg[SA[i - 1]] + suffix_cmp(SA[i - 1], SA[i]);
+		for (int i = 0; i < sz; i++) g[i] = tg[i];
+	}
+	int len = 0;
+	for (int i = 0; i < sz; i++) {
+		if (g[i] == 0) {
+			LCP[g[i]] = -1;
+			continue;
+		}
+		while ((i + len < sz) && (SA[g[i] - 1] + len < sz) && s[i + len] == s[SA[g[i] - 1] + len]) len++;
+		LCP[g[i]] = len;
+		len = max(0, len - 1);
+	}
+}

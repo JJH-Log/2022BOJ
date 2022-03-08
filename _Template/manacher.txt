@@ -1,0 +1,29 @@
+string s;
+int p, d[MAXN * 2];
+
+void manacher() {
+   /*============================================
+    string s : target string (init by input)
+    int p : end point of last palindrome (init value : 0)
+    int d[MAXN * 2] : array of manacher (init value : 0)
+    ============================================*/
+    int sz = s.size();
+    s += s.substr(1);
+    for (int i = sz - 1; i > 0; i--) {
+        s[2 * i] = s[i];
+        s[2 * i - 1] = '#';
+    }
+    sz = s.size();
+    for (int i = 1; i < sz; i++)
+    {
+        d[i] = p ? max(0, min(d[2 * p - i], p + d[p] - i)) : 0;
+        while (i - d[i] - 1 >= 0 && i + d[i] + 1 < n && s[i - d[i] - 1] == s[i + d[i] + 1]) d[i]++;
+        if (i + d[i] > p + d[p]) p = i;
+    }
+    for (int i = 0; i < sz; i++) {
+        /*
+        maybe custom function here
+        */
+        d[i] += i % 2 == d[i] % 2;
+    }
+}
