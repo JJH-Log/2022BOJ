@@ -6,7 +6,7 @@ bool suffix_cmp(int x, int y) {
 	if (g[x] != g[y]) return g[x] < g[y]; 
 	int xi = x + t < sz ? g[x + t] : -1;
 	int yi = y + t < sz ? g[y + t] : -1;
-	return g[x + t] < g[y + t];
+	return xi < yi;
 }
 
 void SuffixArrayLCP() {
