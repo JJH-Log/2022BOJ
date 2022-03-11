@@ -1,4 +1,4 @@
-## 푼 문제 목록 [총 37문제]
+## 푼 문제 목록 [총 40문제]
 
 <details>
 <summary>3월 1주차 [22문제]</summary>
@@ -34,7 +34,7 @@
 
 
 <details>
-<summary>3월 2주차 [15문제 / Manacher, LCP & Suffix Array, 트리 동형 사상]</summary>
+<summary>3월 2주차 [18문제 / Manacher, LCP & Suffix Array, 트리 동형 사상]</summary>
 <div markdown="1">
   
 |번호|티어|제목|
@@ -55,6 +55,9 @@
 |10971|실버2|외판원 순회 2|
 |19699|실버2|소-난다1|
 |18123|다이아4|평행우주|
+|21938|실버2|영상처리|
+|18128|골드1|치삼이의 징검다리 건너기|
+|1587|골드1|이분 매칭|
 
 </div>
 </details>
