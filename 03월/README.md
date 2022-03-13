@@ -1,4 +1,4 @@
-## 푼 문제 목록 [총 45문제]
+## 푼 문제 목록 [총 48문제]
 
 <details>
 <summary>3월 1주차 [22문제]</summary>
@@ -34,7 +34,7 @@
 
 
 <details>
-<summary>3월 2주차 [23문제 / Manacher, LCP & Suffix Array, 트리 동형 사상]</summary>
+<summary>3월 2주차 [26문제 / Manacher, LCP & Suffix Array, 트리 동형 사상]</summary>
 <div markdown="1">
   
 |번호|티어|제목|
@@ -63,6 +63,9 @@
 |10451|실버2|순열 사이클|
 |2504|실버2|괄호의 값|
 |3407|실버2|맹세|
+|3683|플래3|고양이와 개|
+|13034|플래3|다각형 게임|
+|16187|플래3|Game on Plane|
 
 </div>
 </details>
