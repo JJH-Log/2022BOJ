@@ -27,10 +27,23 @@ using pii = pair<int, int>;
 using pll = pair<lld, lld>;
 
 
+int L, N;
+int rm, rM;
 int main() {
 	ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-	
+	int x, T;
+	cin >> T;
+	while (T--) {
+		cin >> L >> N;
+		rm = 0; rM = 0;
+		for (int i = 0; i < N; i++) {
+			cin >> x;
+			rm = max(rm, min(L - x, x));
+			rM = max(rM, max(L - x, x));
+		}
+		cout << rm << ' ' << rM << '\n';
+	}
 
 	return 0;
 }
