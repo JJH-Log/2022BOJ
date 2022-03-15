@@ -1,4 +1,4 @@
-## 푼 문제 목록 [총 60문제]
+## 푼 문제 목록 [총 61문제]
 
 <details>
 <summary>3월 1주차 [22문제]</summary>
@@ -72,7 +72,7 @@
 
 
 <details>
-<summary>3월 3주차 [12문제]</summary>
+<summary>3월 3주차 [13문제]</summary>
 <div markdown="1">
   
 |번호|티어|제목|
@@ -89,6 +89,7 @@
 |5397|실버3|키로거|
 |1965|실버2|상자넣기|
 |15664|실버2|N과 M (10)|
+|8282|다이아5|Automorphisms|
 
 </div>
 </details>
